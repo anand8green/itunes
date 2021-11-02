@@ -1,9 +1,11 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("search term value", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const searchTerm = screen.getByPlaceholderText("Search...");
+  expect(searchTerm).toHaveValue("beyonce");
+  fireEvent.change(searchTerm, { target: { value: "Hero" } });
+  expect(searchTerm).toHaveValue("Hero");
 });

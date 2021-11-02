@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(28, 28, 28);
+  color: white;
+  font-weight: 100;
+}
+
+input,
+select,
+button {
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border: none;
+  display: block;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.315);
+  font-size: 1.2rem;
+  font-weight: 100;
+  outline: none;
+}
+input {
+  border-radius: 0.5rem 0 0 0;
+  border-right: none;
+}
+button {
+  background-color: black;
+  width: 10rem;
+  margin: 0 1rem;
+  border-radius: 0.3rem;
+  color: white;
+}
+select {
+  background-color: rgb(57, 57, 57);
+  border-radius: 0 0 0.5rem 0;
+  border-color: black;
+  color: wheat;
+}
+
+header {
+  background-color: rgb(48, 5, 44);
+  padding: 3rem;
+  .logo {
+    img {
+      display: block;
+      width: 16rem;
+      margin: 3rem 0;
+    }
+    h1 {
+      color: black;
+    }
+  }
+  .searchForm {
+    display: flex;
+  }
+}
+
+main {
+  padding: 3rem;
+}
+
+.itemContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  margin: 5rem 2rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.3rem;
+
+  .artist {
+    margin: 0.3rem 0;
+    font-size: 0.8rem;
+    color: gray;
+  }
+  .pic {
+    width: "100%";
+    // height: 7rem;
+    overflow: hidden;
+    margin: 1rem 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.504);
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.511);
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 0.5rem;
+    }
+  }
+}
